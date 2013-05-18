@@ -200,7 +200,7 @@ Then /^I should see the notifier JavaScript for the following:$/ do |table|
   environment = hash['environment'] || 'production'
 
   steps %{
-    Then the output should contain "#{host}/javascripts/notifier.js"
+    Then the output should contain ".airbrake.io/notifier.min.js"
     And the output should contain "Airbrake.setKey('#{api_key}');"
     And the output should contain "Airbrake.setHost('#{host}');"
     And the output should contain "Airbrake.setEnvironment('#{environment}');"
